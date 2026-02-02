@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">   
+    <title>FootballZone - Web Shop</title>
+</head>
+
+<body>
+
+<header>
+    <img src="dresovi.png" alt="Ikona" class="logo">
+    <h1>FootballZone Web Shop</h1>
+</header>
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="Aboutme.html">O shopu</a>
+    <a href="#Dresovi.html">Dresovi</a>
+    <a href="#Kopacke.html">Kopačke</a>
+</nav>
+
+<main class="products">
+
+
+    <div class="product shoe">
+        <span class="discount">-10%</span>
+        <img src="https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/air-zoom-mercurial.webp" alt="Nike Mercurial">
+        <h2>Nike Mercurial Superfly</h2>
+        <p class="price">
+            <span class="old-price">220 €</span>
+            <span class="new-price">198 €</span>
+        </p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Nike Mercurial Superfly 2025/26 dizajnirane za brzinu i agilnost. Lagane i prozračne, idealne za napadače koji vole eksplozivne pokrete.</p>
+        </div>
+    </div>
+
+    <!-- 2. Nike -->
+    <div class="product shoe">
+        <img src="https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/nike-phantom.webp" alt="Nike Phantom">
+        <h2>Nike Phantom GT</h2>
+        <p class="price">210 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Nike Phantom GT 2025/26 optimizirane za preciznost i kontrolu lopte. Odličan grip i dizajn za napadače i vezne igrače.</p>
+        </div>
+    </div>
+
+    <!-- 3. Nike -->
+    <div class="product shoe">
+        <img src="https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/nike-tiempo.webp" alt="Nike Tiempo">
+        <h2>Nike Tiempo Legend</h2>
+        <p class="price">200 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Nike Tiempo Legend 2025/26 pružaju klasičan stil i izdržljivost. Koža premium kvalitete i savršena prilagodba stopalu za kontrolu i udobnost.</p>
+        </div>
+    </div>
+
+    <!-- 4. Adidas -->
+    <div class="product shoe">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill/adidas-x-speedportal.webp" alt="Adidas X Speedportal">
+        <h2>Adidas X Speedportal</h2>
+        <p class="price">215 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Adidas X Speedportal 2025/26 dizajnirane za brzinu. Lagane i fleksibilne kopačke koje pomažu pri brzim sprintovima i promjenama smjera.</p>
+        </div>
+    </div>
+
+    <!-- 5. Adidas -->
+    <div class="product shoe">
+        <span class="discount">-15%</span>
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill/adidas-predator.webp" alt="Adidas Predator">
+        <h2>Adidas Predator Edge</h2>
+        <p class="price">
+            <span class="old-price">230 €</span>
+            <span class="new-price">196 €</span>
+        </p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Adidas Predator Edge 2025/26 optimizirane za kontrolu lopte i precizne udarce. Gumena tekstura na vrhu pruža bolje upravljanje i svestranost na terenu.</p>
+        </div>
+    </div>
+
+    <!-- 6. Adidas - novi dodatak -->
+    <div class="product shoe">
+        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill/adidas-nemeziz.webp" alt="Adidas Nemeziz">
+        <h2>Adidas Nemeziz 19+</h2>
+        <p class="price">220 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Adidas Nemeziz 19+ 2025/26 nude maksimalnu fleksibilnost i kontrolu. Inovativni dizajn "Agility Bandage" pruža čvrstoću i stabilnost pri naglim promjenama smjera.</p>
+        </div>
+    </div>
+
+    <!-- 7. Puma -->
+    <div class="product shoe">
+        <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/puma-future-z.webp" alt="Puma Future Z">
+        <h2>Puma Future Z 2.1</h2>
+        <p class="price">205 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Puma Future Z 2.1 2025/26 donose inovativni dizajn za kontrolu i fleksibilnost. Lagane, s prozračnim materijalom i idealne za vezne igrače i kreatore igre.</p>
+        </div>
+    </div>
+
+    <!-- 8. Puma - novi dodatak -->
+    <div class="product shoe">
+        <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/puma-ultra.webp" alt="Puma Ultra">
+        <h2>Puma Ultra 1.3</h2>
+        <p class="price">215 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Puma Ultra 1.3 2025/26 dizajnirane za brzinu i agilnost. Lagane kopačke sa savršenim gripom za brze i precizne pokrete na travi i umjetnoj podlozi.</p>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+<footer>
+    <div class="footer-icons">
+        <a href="https://www.google.com/maps" style="color:white;">📍</a>
+        <a href="mailto:footballzone@gmail.com" style="color:white;">📧</a>
+        <a href="tel:+385991234567" style="color:white;">📞</a>
+    </div>
+
+    <p>Gabriel Beljak &copy; 2025</p>
+</footer>
+
+<script>
+    function toggleDetails(button) {
+        const details = button.nextElementSibling;
+        details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+    </script>
+    
+</body>
+</html>
