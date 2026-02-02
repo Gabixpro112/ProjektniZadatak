@@ -4,46 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet"href="styles.css">   
+    <link rel="stylesheet" href="styles.css">   
     <title>FootballZone - Web Shop</title>
 </head>
 
 <body>
 
-    <header>
-         <img src="favicon.png" alt="Ikona" class="logo">
-        <h1>FootballZone Web Shop</h1>
+    <!-- Header / Hero -->
+    <header class="hero">
+        <img src="favicon.png" alt="Ikona" class="logo">
+        <h1>FootballZone</h1>
+        <p class="hero-subtitle">Sve za nogomet – dresovi, kopačke i lopte!</p>
+        <a href="Dresovi.html" class="cta-btn">Pogledaj dresove</a>
     </header>
 
+    <!-- Navigacija -->
     <nav>
         <a href="index.html">Početna</a>
-        <a href="Aboutme.html">O shopu</a>
-        <a href="#">Kontakt</a>
+        <a href="Aboutme.html">O nama</a>
+        <a href="Dresovi.html">Dresovi</a>
     </nav>
 
+    <!-- Main Content -->
     <main>
-        <h2>Dobrodošli u FootballZone!</h2>
-        <p>
-            FootballZone je vaš online web shop specijaliziran za nogometnu opremu i obuću.
-            Nudimo kvalitetne nogometne kopačke, tenisice i sportsku opremu za rekreativce
-            i profesionalce. Naš cilj je omogućiti vam najbolji izbor proizvoda po
-            pristupačnim cijenama, uz jednostavnu i sigurnu online kupnju.
-        </p>
+        <section class="welcome">
+            <h2>Dobrodošli u FootballZone!</h2>
+            <p>
+                FootballZone je vaš online web shop specijaliziran za nogometnu opremu i obuću.
+                Nudimo kvalitetne nogometne kopačke, tenisice i sportsku opremu za rekreativce
+                i profesionalce. Naš cilj je omogućiti vam najbolji izbor proizvoda po
+                pristupačnim cijenama, uz jednostavnu i sigurnu online kupnju.
+            </p>
+        </section>
 
-        <div class="image-section">
-            <img src="https://www.euronogomet.com/images/vijesti5/nogometnaoprema523.png" alt="FootballZone proizvod">
-            <img src="https://footballmania.hr/pub/media/catalog/category/Lopta.jpg" alt="FootballZone proizvod">
-        </div>
+        <section class="featured">
+            <h2>Istaknuti proizvodi</h2>
+            <div class="featured-grid">
+                <div class="category-card">
+                    <img src="https://prosportbh.ba/Media/Slike/Artikli/174-1-givova-dresovi-nogomet-v.jpg" alt="Dresovi">
+                    <h3>Dresovi</h3>
+                    <a href="Dresovi.html" class="card-btn">Pogledaj</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://footballmania.hr/pub/media/catalog/category/Lopta.jpg" alt="Lopte">
+                    <h3>Lopte</h3>
+                    <a href="Proizvodi.html#lopte" class="card-btn">Pogledaj</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDMPbR4FSFaHUQ2lXGY2m4oF746Hdu4kJBHg&s" alt="Kopačke">
+                    <h3>Kopačke</h3>
+                    <a href="Proizvodi.html#kopacke" class="card-btn">Pogledaj</a>
+                </div>
+            </div>
+        </section>
     </main>
-<footer>
-    <div class="footer-icons">
-        <a href="https://www.google.com/maps" title="Lokacija" style="color:white; text-decoration:none;">📍</a>
-        <a href="mailto:footballzone@gmail.com" title="Email" style="color:white; text-decoration:none;">📧</a>
-        <a href="tel:+385991234567" title="Kontakt" style="color:white; text-decoration:none;">📞</a>
-    </div>
 
-    <p>Gabriel Beljak &copy; 2025</p>
-</footer>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.google.com/maps" title="Lokacija">📍</a>
+            <a href="mailto:footballzone@gmail.com" title="Email">📧</a>
+            <a href="tel:+385991234567" title="Kontakt">📞</a>
+        </div>
+
+        <p>Gabriel Beljak &copy; 2025</p>
+    </footer>
 
 </body>
 </html>
