@@ -130,6 +130,7 @@ footer {
     .image-section img {
         width: 100%;
     }
+
 }
 .products {
     display: grid;
@@ -175,6 +176,46 @@ footer {
     font-weight: bold;
     text-transform: uppercase;
 }
+.featured-dres {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.featured-dres h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #e60000; /* naslov sekcije */
+}
+
+.dres-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white; /* bijeli tekst */
+}
+
+.featured-dres-img {
+    width: 200px;
+    max-width: 90%;
+    border: 3px solid #e60000;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.featured-dres-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.dres-text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white; /* bijeli tekst */
+}
+
 
 .price {
     margin: 10px 0;
@@ -321,7 +362,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-/* Hero za lopte */
+
 .hero-lopte {
     background-color: #cceeff;
     padding: 80px 20px;
@@ -338,7 +379,7 @@ footer {
     font-size: 1.5em;
 }
 
-/* Grid lopti */
+
 .products-lopte {
     background-color: #e6f7ff;
     padding: 40px 20px;
@@ -351,7 +392,7 @@ footer {
     justify-items: center;
 }
 
-/* Kartice lopti */
+
 .ball-card {
     background: white;
     border-radius: 50px;
@@ -403,7 +444,7 @@ footer {
     box-shadow: 0 8px 20px rgba(40,167,69,0.5);
 }
 
-/* Popusti */
+
 .discount {
     position: absolute;
     top: 12px;
@@ -417,7 +458,7 @@ footer {
     text-transform: uppercase;
 }
 
-/* Cijene */
+
 .old-price {
     text-decoration: line-through;
     color: gray;
@@ -429,7 +470,7 @@ footer {
     font-weight: bold;
 }
 
-/* Detalji */
+
 .details {
     display: none;
     margin-top: 10px;
