@@ -1,4 +1,5 @@
 
+/* GLOBAL STILOVI */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +9,15 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     min-height: 100vh;
+    color: #333;
 }
 
+/* HEADER */
 header {
-    position: relative; 
+    position: relative;
     background-image: url('https://www.maxportal.hr/wp-content/uploads/2023/08/tenisice-7777-1.jpg');
     background-size: cover;
     background-position: center;
@@ -26,18 +28,17 @@ header {
 }
 
 header .logo {
-    position: absolute; 
-    top: 50px;          
-    left: 10px;        
-    width: 100px;      
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 100px;
     height: 100px;
 }
 
-
+/* NAVIGATION */
 nav {
     background-color: #009900;
     padding: 12px;
-
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -54,16 +55,17 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* MAIN SECTION */
 main {
     background-color: #ffffff;
     padding: 60px 20px;
     text-align: center;
-    color: #333;
 }
 
 main h2 {
     font-size: 2.2em;
     color: #004d00;
+    margin-bottom: 20px;
 }
 
 main p {
@@ -73,6 +75,7 @@ main p {
     line-height: 1.6;
 }
 
+/* IMAGE SECTION */
 .image-section {
     display: flex;
     justify-content: center;
@@ -88,6 +91,7 @@ main p {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* FOOTER */
 footer {
     background-color: #004d00;
     color: white;
@@ -103,119 +107,103 @@ footer {
     margin-bottom: 10px;
 }
 
-
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
-
     header h1 {
         font-size: 2em;
     }
-
     nav {
         flex-direction: column;
         gap: 15px;
     }
-
     main {
         padding: 40px 15px;
     }
-
     main h2 {
         font-size: 1.8em;
     }
-
     main p {
         font-size: 1.1em;
     }
-
     .image-section img {
         width: 100%;
     }
-
 }
-.products {
+
+/* PRODUCT GRID */
+.products, .featured-grid, .balls-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
     gap: 25px;
-    padding: 40px;
-    justify-items: center; 
+    justify-items: center;
+    padding: 40px 20px;
 }
 
-.product {
+.products {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.featured-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 20px;
+}
+
+.balls-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* PRODUCT CARD */
+.product, .category-card, .ball-card {
     background: white;
-    width: 100%; 
-    max-width: 260px; 
-    padding: 20px;
     border-radius: 15px;
+    padding: 20px;
     text-align: center;
     position: relative;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 280px;
 }
 
-.product:hover {
-    transform: translateY(-8px);
+.product:hover, .category-card:hover, .ball-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-
-
-.product img {
+.product img, .category-card img, .ball-img-wrapper img {
     width: 100%;
     border-radius: 12px;
     margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
+.product:hover img, .category-card:hover img, .ball-card:hover img {
+    transform: scale(1.05);
+}
+
+/* DISCOUNT BADGE */
 .discount {
     position: absolute;
     top: 12px;
     left: 12px;
     background: red;
     color: white;
-    padding: 5px 10px;
+    padding: 5px 12px;
     font-size: 12px;
     border-radius: 20px;
     font-weight: bold;
     text-transform: uppercase;
 }
-.featured-dres {
-    text-align: center;
-    margin: 40px 0;
+
+.discount.AKCIJA {
+    background: orange;
 }
 
-.featured-dres h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #e60000; /* naslov sekcije */
+/* PRODUCT TEXT */
+h2, h3 {
+    margin: 10px 0;
+    color: #004d00;
 }
-
-.dres-link {
-    display: inline-block;
-    text-decoration: none;
-    color: white; /* bijeli tekst */
-}
-
-.featured-dres-img {
-    width: 200px;
-    max-width: 90%;
-    border: 3px solid #e60000;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-}
-
-.featured-dres-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-}
-
-.dres-text {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: white; /* bijeli tekst */
-}
-
 
 .price {
     margin: 10px 0;
@@ -225,7 +213,7 @@ footer {
 .old-price {
     text-decoration: line-through;
     color: gray;
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 .new-price {
@@ -233,15 +221,20 @@ footer {
     font-weight: bold;
 }
 
+/* DETAILS BUTTON */
+.details-btn, .card-btn, .add-btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
 .details-btn {
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 30px;
-    cursor: pointer;
     font-size: 14px;
-    transition: all 0.3s ease;
     box-shadow: 0 6px 15px rgba(0,123,255,0.4);
 }
 
@@ -250,99 +243,21 @@ footer {
     box-shadow: 0 8px 20px rgba(0,123,255,0.6);
 }
 
-.details {
-    display: none; 
-    margin-top: 15px;
-    font-size: 14px;
-    color: #444;
+.add-btn {
+    background: linear-gradient(135deg, #28a745, #1c7c31);
+    color: white;
+    border: none;
 }
 
-.discount.AKCIJA {
-    background: orange; 
-}
-@media (max-width: 1200px) {
-    .products {
-        grid-template-columns: repeat(3, 1fr); 
-    }
-}
-
-@media (max-width: 900px) {
-    .products {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media (max-width: 600px) {
-    .products {
-        grid-template-columns: 1fr; 
-    }
-}
-
-.featured {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.featured h2 {
-    font-size: 2em;
-    color: #004d00;
-    margin-bottom: 30px;
-}
-
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
-    justify-items: center;
-    margin-top: 20px;
-}
-
-.category-card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-    position: relative;
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
-
-.category-card img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease;
-}
-
-.category-card:hover img {
+.add-btn:hover {
+    box-shadow: 0 8px 20px rgba(40,167,69,0.5);
     transform: scale(1.05);
 }
 
-.category-card h3 {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: #004d00;
-}
-
 .card-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 25px;
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1em;
-    box-shadow: 0 6px 15px rgba(0,123,255,0.3);
-    transition: all 0.3s ease;
 }
 
 .card-btn:hover {
@@ -351,18 +266,55 @@ footer {
     box-shadow: 0 8px 20px rgba(0,123,255,0.5);
 }
 
-@media (max-width: 1024px) {
-    .featured-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* DETAILS TEXT */
+.details {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
 }
 
-@media (max-width: 600px) {
-    .featured-grid {
-        grid-template-columns: 1fr;
-    }
+/* FEATURED PRODUCTS */
+.featured-products {
+    text-align: center;
+    margin: 40px 0;
 }
 
+.featured-products h2 {
+    font-size: 1.8rem;
+    color: #e60000;
+    margin-bottom: 20px;
+}
+
+.featured-item {
+    text-decoration: none;
+    color: white;
+}
+
+.featured-item img {
+    width: 200px;
+    max-width: 90%;
+    border: 3px solid #e60000;
+    border-radius: 12px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+
+.featured-text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* HERO LOPTE */
 .hero-lopte {
     background-color: #cceeff;
     padding: 80px 20px;
@@ -379,101 +331,60 @@ footer {
     font-size: 1.5em;
 }
 
-
-.products-lopte {
-    background-color: #e6f7ff;
-    padding: 40px 20px;
+/* MEDIA QUERIES ZA GRID */
+@media (max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.balls-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-items: center;
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-
-.ball-card {
-    background: white;
-    border-radius: 50px;
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+        .featured-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+/* Kartice proizvoda i lopti */
+.product, .ball-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* počinje od vrha, detalji na dnu */
+    height: 100%;
     padding: 20px;
     text-align: center;
-    width: 100%;
-    max-width: 280px;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
     position: relative;
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    background: white;
 }
 
-.ball-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+/* Ime proizvoda */
+.product h2, .ball-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+    color: #004d00;
 }
 
-.ball-img-wrapper {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 15px auto;
+/* Cijena - malo spustiti niže */
+.price {
+    font-size: 1rem;
+    margin: 15px 0 20px 0; /* više prostora od imena proizvoda, manje od gumba */
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.ball-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.ball-card:hover img {
-    transform: scale(1.1);
-}
-
-.add-btn {
-    background: linear-gradient(135deg, #28a745, #1c7c31);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.add-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(40,167,69,0.5);
-}
-
-
-.discount {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: #ff0000;
-    color: white;
-    padding: 5px 12px;
-    font-size: 12px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-
-.old-price {
-    text-decoration: line-through;
-    color: gray;
-    margin-right: 6px;
-}
-
-.new-price {
-    color: #e60000;
-    font-weight: bold;
-}
-
-
-.details {
-    display: none;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #444;
+/* Gumb na dnu */
+.details-btn, .add-btn {
+    margin-top: auto; /* guranje gumba na dno kartice */
 }

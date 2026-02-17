@@ -44,7 +44,7 @@
 
         <div class="ball-card">
             <div class="ball-img-wrapper">
-                <img src="https://i1.t4s.cz//products/084285-01/puma-orbita-laliga-1-fifa-quality-pro-769728-084285-01-960.webp" alt="Lopta Puma Orbita LaLiga 1 (FIFA Quality Pro)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOoH6W1ozQ1JHJdTrUPvei0-JXVp_TUM5vVQ&s" alt="Lopta Puma Orbita LaLiga 1 (FIFA Quality Pro)">
             </div>
             <h3>Lopta Puma Orbita LaLiga 1</h3>
             <p class="price">75 €</p>
@@ -71,7 +71,7 @@
        
         <div class="ball-card">
             <div class="ball-img-wrapper">
-                <img src="https://sportszone.hr/wp-content/uploads/2025/08/Uhlsport-SHNL-lopta.jpg" alt="Supersport HNL lopta za sezonu 25/26">
+                <img src="https://ip.index.hr/remote/bucket.index.hr/b/index/24789a59-4a65-4327-bd22-0cd1c0fec9aa.jpg" alt="Supersport HNL lopta za sezonu 25/26">
             </div>
             <h3>Supersport HNL lopta za sezonu 25/26"</h3>
             <p class="price">50 €</p>
@@ -82,7 +82,7 @@
         </div>
 
         
-        <div class="ball-card">
+        <div class="ball-card" id="liga-prvaka-lopta">
             <span class="discount">-30%</span>
             <div class="ball-img-wrapper">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMLsCdJnaYi33F0j5ivUjhr-jUgcrQw399pQ&s" alt="Lopta adidas Mini UEFA Champions League 2025-2026">
@@ -120,7 +120,7 @@
         </div>
           <div class="ball-card">
             <div class="ball-img-wrapper">
-                <img src="https://i1.t4s.cz//products/f5u5000-23/molten-uefa-europa-league-match-ball-2022-23-489329-f5u5000-23-960.webp" alt="Lopta Molten UEFA Europa League Match Ball">
+                <img src="https://i1.t4s.cz/products/f5u5000-23/molten-uefa-europa-league-match-ball-2022-23-489329-f5u5000-23.jpeg" alt="Lopta Molten UEFA Europa League Match Ball">
             </div>
             <h3>Lopta Molten UEFA Europa League</h3>
             <p class="price">74,99 €</p>
@@ -174,3 +174,14 @@ function toggleDetails(button) {
 
 </body>
 </html>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if(hash === "#liga-prvaka-lopta") {
+        const product = document.querySelector(hash);
+        const details = product.querySelector('.details');
+        details.style.display = 'block';
+        product.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+</script>

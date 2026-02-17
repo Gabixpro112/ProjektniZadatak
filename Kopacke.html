@@ -75,7 +75,7 @@
     </div>
 
     
-    <div class="product shoe">
+    <div class="product shoe" id="najbolje-kopacke">
         <span class="discount">-15%</span>
         <img src="https://thumblr.uniid.it/product/250615/5ca2b3978cfa.jpg?width=3840&format=webp&q=75" alt="Adidas Predator">
         <h2>Adidas Predator Edge</h2>
@@ -102,7 +102,7 @@
 
     
     <div class="product shoe">
-        <img src="https://i1.t4s.cz//products/10605803/puma-future-z-2-1-fg-ag-340069-10605804-960.webp" alt="Puma Future Z">
+        <img src="https://thumblr.uniid.it/product/212762/68870b58ac55.jpg?width=3840&format=webp&q=75" alt="Puma Future Z">
         <h2>Puma Future Z 2.1</h2>
         <p class="price">70 €</p>
         <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
@@ -121,7 +121,32 @@
             <p>Puma Ultra 1.3 2025/26 dizajnirane za brzinu i agilnost. Lagane kopačke sa savršenim gripom za brze i precizne pokrete na travi i umjetnoj podlozi.</p>
         </div>
     </div>
-
+<div class="product shoe">
+        <span class="discount">-15%</span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_-yYd2OgU5jm0lyxJvJzoyYHBHztRXrSp1w&s" alt="Kopačke Puma FUTURE Pro FG/AG">
+        <h2>Kopačke Puma FUTURE Pro FG/AG</h2>
+        <p class="price">
+            <span class="old-price">120 €</span>
+            <span class="new-price">102 €</span>
+        </p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Puma FUTURE Pro FG/AG kopačke dizajnirane su za profesionalne performanse. Inovativni “NETFIT” sustav vezanja omogućuje savršeno prilagođavanje stopalu, dok lagani materijali i fleksibilni potplat pružaju brzinu, kontrolu i eksplozivne pokrete na travi i umjetnoj podlozi. Savršen izbor za igrače koji žele kombinaciju stila i funkcionalnosti.</p>
+        </div>
+    </div>
+    <div class="product shoe">
+        <span class="discount">-5%</span>
+        <img src="https://salasport.hr/wp-content/uploads/2024/09/Kopacke-Aguila-2417-1-300x300.jpg" alt="KOPAČKE ZA NOGOMET AGUILA 2417">
+        <h2>Kopačke Aguila Joma 2417</h2>
+        <p class="price">
+            <span class="old-price">60 €</span>
+            <span class="new-price">57 €</span>
+        </p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Kopačke Aguila Joma 2417 kombiniraju udobnost i preciznost. Lagane i prozračne, pružaju optimalnu kontrolu lopte i stabilnost pri svakom potezu. Idealne su za sve pozicije na terenu, od napadača do veznog reda, te omogućuju maksimalnu agilnost i brzinu tijekom igre.</p>
+        </div>
+    </div>
 </main>
 
 
@@ -146,3 +171,14 @@
     
 </body>
 </html>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if(hash === "#najbolje-kopacke") {
+        const product = document.querySelector(hash);
+        const details = product.querySelector('.details');
+        details.style.display = 'block';
+        product.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+</script>
