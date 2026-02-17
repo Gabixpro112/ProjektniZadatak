@@ -1,5 +1,5 @@
 
-/* GLOBAL STILOVI */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
     color: #333;
 }
 
-/* HEADER */
+
 header {
     position: relative;
     background-image: url('https://www.maxportal.hr/wp-content/uploads/2023/08/tenisice-7777-1.jpg');
@@ -35,7 +35,7 @@ header .logo {
     height: 100px;
 }
 
-/* NAVIGATION */
+
 nav {
     background-color: #009900;
     padding: 12px;
@@ -55,7 +55,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* MAIN SECTION */
+
 main {
     background-color: #ffffff;
     padding: 60px 20px;
@@ -75,7 +75,7 @@ main p {
     line-height: 1.6;
 }
 
-/* IMAGE SECTION */
+
 .image-section {
     display: flex;
     justify-content: center;
@@ -91,7 +91,7 @@ main p {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* FOOTER */
+
 footer {
     background-color: #004d00;
     color: white;
@@ -107,7 +107,7 @@ footer {
     margin-bottom: 10px;
 }
 
-/* MEDIA QUERIES */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -130,7 +130,7 @@ footer {
     }
 }
 
-/* PRODUCT GRID */
+
 .products, .featured-grid, .balls-grid {
     display: grid;
     gap: 25px;
@@ -151,7 +151,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* PRODUCT CARD */
+
 .product, .category-card, .ball-card {
     background: white;
     border-radius: 15px;
@@ -181,7 +181,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* DISCOUNT BADGE */
+
 .discount {
     position: absolute;
     top: 12px;
@@ -199,7 +199,7 @@ footer {
     background: orange;
 }
 
-/* PRODUCT TEXT */
+
 h2, h3 {
     margin: 10px 0;
     color: #004d00;
@@ -221,7 +221,7 @@ h2, h3 {
     font-weight: bold;
 }
 
-/* DETAILS BUTTON */
+
 .details-btn, .card-btn, .add-btn {
     padding: 12px 25px;
     border-radius: 30px;
@@ -266,7 +266,7 @@ h2, h3 {
     box-shadow: 0 8px 20px rgba(0,123,255,0.5);
 }
 
-/* DETAILS TEXT */
+
 .details {
     display: none;
     margin-top: 10px;
@@ -274,7 +274,7 @@ h2, h3 {
     color: #444;
 }
 
-/* FEATURED PRODUCTS */
+
 .featured-products {
     text-align: center;
     margin: 40px 0;
@@ -314,7 +314,7 @@ h2, h3 {
     color: white;
 }
 
-/* HERO LOPTE */
+
 .hero-lopte {
     background-color: #cceeff;
     padding: 80px 20px;
@@ -331,7 +331,7 @@ h2, h3 {
     font-size: 1.5em;
 }
 
-/* MEDIA QUERIES ZA GRID */
+
 @media (max-width: 1200px) {
     .products {
         grid-template-columns: repeat(3, 1fr);
@@ -352,11 +352,11 @@ h2, h3 {
         }
     }
 }
-/* Kartice proizvoda i lopti */
+
 .product, .ball-card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* počinje od vrha, detalji na dnu */
+    justify-content: flex-start; 
     height: 100%;
     padding: 20px;
     text-align: center;
@@ -366,17 +366,17 @@ h2, h3 {
     background: white;
 }
 
-/* Ime proizvoda */
+
 .product h2, .ball-card h3 {
     font-size: 1.2rem;
     margin: 10px 0 5px 0;
     color: #004d00;
 }
 
-/* Cijena - malo spustiti niže */
+
 .price {
     font-size: 1rem;
-    margin: 15px 0 20px 0; /* više prostora od imena proizvoda, manje od gumba */
+    margin: 15px 0 20px 0; 
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -384,7 +384,7 @@ h2, h3 {
     text-align: center;
 }
 
-/* Gumb na dnu */
+
 .details-btn, .add-btn {
-    margin-top: auto; /* guranje gumba na dno kartice */
+    margin-top: auto; 
 }
