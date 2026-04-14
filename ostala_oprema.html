@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">   
+    <title>FootballZone - Web Shop</title>
+    <link rel="icon" type="image/x-icon" href="sportska_oprema.png">
+</head>
+
+<body>
+
+<header>
+    <img src="sportska_oprema.png" alt="Ikona" class="logo">
+    <h1>Dresovi - FootballZone</h1>
+</header>
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="Aboutme.html">O nama</a>
+    <a href="Dresovi.html">Dresovi</a>
+    <a href="Lopte.html">Lopte</a>
+    <a href="Kopacke.html">Kopačke</a>
+    <a href="ostala_oprema.html">Ostala oprema</a>
+    <a href="cart.html">Košarica </a>
+</nav>
+
+<main class="products">
+
+    
+    <div class="product">
+        <img src="https://www.sportvision.hr/files/images/slike_proizvoda/media/FJ4/FJ4864-420/images/FJ4864-420.jpg.webp" alt="golmanske rukavice Nike">
+        <h2>Golmanske rukavice Nike</h2>
+        <p class="price">20 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Igrači suparničkog tima trče prema vama držeći loptu u posjedu. Pripremaju akciju za postizanje pogotka i pucaju, a vi branite udarac i donosite pobjedu svojoj momčadi! Zato navucite rukavice izrađene upravo za to. S pjenastom podstavom koja pruža dodatno ojastučenje ondje gdje vam je najpotrebnije i glatkim dlanovima koji vam omogućuju da pružite svoj maksimum u svim vremenskim uvjetima, bit ćete spremni za sve izazove koje vaša sljedeća utakmica nosi sa sobom.</p>
+        </div>
+    </div>
+     <div class="product">
+        <span class="discount">-20%</span>
+        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/49799ee753c9478bb321ae8b01227bea_9366/X_Speedportal_League_Shin_Guards_Green_HC0615_01_standard.jpg" alt="Kostobrani+čarapica">
+        <h2>adidas X Speedportal League Shin Guard</h2>
+        <p class="price">
+            <span class="old-price">14,99 €</span>
+            <span class="new-price">11,99 €</span>
+        </p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>adidas X Speedportal League Shin Guards su nogometni štitnici za potkoljenice. Izrađeni su od lagane plastike koja je ujedno i dovoljno izdržljiva da pruži dovoljan stupanj zaštite. Perforirana pjena na stražnjoj strani pomaže ublažiti udarce dok omogućava prozračnost. Mrežasti rukav pomaže držati štitnike na mjestu i pruža udobno prianjanje. Za dodatnu udobnost, štitnici su dizajnirani asimetrično kako bi što bolje pristajali obliku noge</p>
+        </div>
+    </div>
+
+
+    <div class="product">
+        <span class="discount">AKCIJA</span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpo5ahlM3_GSwPV590EV2ww-nZSqJ5N6eaOw&s" alt="podhlace i podmajce">
+        <h2>Podhlace i podmajica</h2>
+        <p class="price">25 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Podhlače i podmajica pružaju savršenu kombinaciju topline, udobnosti i prozračnosti. Izrađene su od mekanog materijala koji prijanja uz tijelo bez stezanja i idealne su za svakodnevno nošenje tokom hladnijih dana. Zadržavaju toplinu, a istovremeno omogućavaju koži da diše.</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="https://www.sport4pro.net/upload/images/shopitem/PVC-BO%C4%8CICA-TOPSTAR-384x500.jpg" alt="Bočica za trening">
+        <h2>PVC bočica Topstar</h2>
+        <p class="price">3,99 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>PVC bočica Topstar dizajnirana je za svakodnevnu upotrebu tijekom treninga i utakmica. Izrađena je od kvalitetnog i izdržljivog materijala koji je lagan, ali dovoljno čvrst da podnese čestu upotrebu. Ergonomski oblik omogućuje jednostavno držanje i brzo pijenje tijekom aktivnosti, bez prekidanja igre ili treninga. Poklopac protiv curenja osigurava da se tekućina ne prolijeva u torbi, a široki otvor omogućuje lako punjenje i čišćenje. Idealna je za sportaše svih razina koji žele pouzdanu i praktičnu bočicu za hidrataciju.</p>
+        </div>
+    </div>
+
+    <div class="product">
+        <span class="discount">-30%</span>
+        <img src="https://gfx.r-gol.com/media/res/products/778/204778/275x360/101689-050_1.webp" alt="markeri">
+        <h2>Marker Joma Training Bib Reversible</h2>
+        <p class="price">
+            <span class="old-price"> 14,95€</span>
+            <span class="new-price"> 13,95€</span>
+        </p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p></p>
+        </div>
+    </div>
+
+    
+    <div class="product">
+        <span class="discount">AKCIJA</span>
+        <img src="https://www.sport4pro.net/upload/images/shopitem/oznacivaci-prostora-heksagonalni-1.jpg" alt="Kapice">
+        <h2>Označivači prostora </h2>
+        <p class="price">23,79 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Heksagonalni označivači prostora sastavni su dio svakog treninga. Set se sastoji od raznih boja: narančasta, žuta, crvena, plava, bijela. Pomoću štapova i označivača moguće je napraviti mini sustav prepona.
+Materijal: PVC<br>
+Set od 50 komada<br>
+Visina: cca 5 cm<br>
+Promjer: 20 cm</p>
+        </div>
+      </div>
+        <div class="product">
+            <span class="discount">-15%</span>
+            <img src="" alt="">
+            <h2></h2>
+            <p class="price">
+                <span class="old-price"> €</span>
+                <span class="new-price"> €</span>
+            </p>
+            <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+            <div class="details">
+                <p></p>
+            </div>
+        </div>
+    
+        <div class="product">
+            <span class="discount">-10%</span>
+            <img src="" alt="">
+            <h2></h2>
+            <p class="price">
+                <span class="old-price"> €</span>
+                <span class="new-price"> €</span>
+            </p>
+            <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+            <div class="details">
+                <p></p>
+            </div>
+        </div>
+
+</main>
+
+
+<footer>
+    <div class="footer-icons">
+        <a href="https://www.google.com/maps" style="color:white;">📍</a>
+        <a href="mailto:footballzone@gmail.com" style="color:white;">📧</a>
+        <a href="tel:+385991234567" style="color:white;">📞</a>
+    </div>
+
+    <p>Gabriel Beljak &copy; 2025</p>
+</footer>
+
+<script>
+    function toggleDetails(button) {
+        const details = button.nextElementSibling;
+        details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+    </script>
+ <script src="cart.js"></script>   
+</body>
+</html>
