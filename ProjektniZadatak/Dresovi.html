@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">   
+    <title>FootballZone - Web Shop</title>
+    <link rel="icon" type="image/x-icon" href="dresovi.png">
+</head>
+
+<body>
+
+<header>
+    <img src="dresovi.png" alt="Ikona" class="logo">
+    <h1>Dresovi - FootballZone</h1>
+</header>
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="Aboutme.html">O nama</a>
+    <a href="Dresovi.html">Dresovi</a>
+    <a href="Lopte.html">Lopte</a>
+    <a href="Kopacke.html">Kopačke</a>
+    <a href="ostala_oprema.html">Ostala oprema</a>
+    <a href="cart.html">Košarica </a>
+</nav>
+
+<main class="products">
+
+    <div class="product" id="real-madrid-dres">
+    <span class="discount">-33%</span>
+    <img src="https://www.rost-sport.hr/EasyEdit/UserFiles/CatalogImages/muski-dres-adidas-real-madrid-2425-home-white/dres-adidas-iu5011-veluni-iu5011-638626957419350550_670_670.jpeg" alt="Dres Real Madrida">
+    <h2>Dres Real Madrida</h2>
+    <p class="price">
+        <span class="old-price">150 €</span>
+        <span class="new-price">99,99 €</span>
+    </p>
+    <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+    <div class="details">
+        <p>Pridruži se kraljevskom klubu s najnovijim dresom Real Madrida za sezonu 2025/26! Klasična bijela boja dobila je suptilne moderne detalje koji odražavaju tradiciju i prestiž kluba. Napredni materijali pružaju izvanrednu prozračnost i udobnost, dok tehnologija odvodi vlagu i omogućuje potpunu slobodu kretanja na terenu. Savršen je izbor za prave navijače koji žele kombinaciju stila, elegancije i vrhunskih performansi.</p>
+    </div>
+</div>
+
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVZRjxuSNQzGhLA0lLqXmbDyz3-RcuOqawEQ&s" alt="Dres Barcelone">
+        <h2>Dres FC Barcelona</h2>
+        <p class="price">90 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Novi dres Blaugrane za sezonu 2025/26 ima upečatljiv izgled s kreativnim elementima koji ističu klupsko nasljeđe i legendarne trenutke u povijesti kluba. Dizajn reflektira tradiciju i inovaciju, uz Nike tehnologiju koja osigurava visok stupanj udobnosti, optimalnu regulaciju temperature i slobodu pokreta kako na terenu tako i izvan njega.</p>
+        </div>
+    </div>
+
+    <div class="product">
+        <span class="discount">AKCIJA</span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2xb5LAsJBcf8kxRwZqIBdVVRXYuxG4vlJmg&s" alt="Kopačke Nike">
+        <h2>Dres FC Arsenal</h2>
+        <p class="price">100 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Arsenalov najnoviji dres za sezonu 2025/26 donosi klasičan crveno-bijeli dizajn s modernim grafičkim detaljima i prepoznatljivim motivom „Gothic A“, koji podsjeća na bogatu tradiciju kluba. Kombinacija naprednih materijala i jedinstvenog izgleda čini ovaj dres pravim izborom za sve navijače koji žele spoj estetike i performansi na terenu.</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSncRtagD_Pa-wKw-PLhB53iOjrM84dMFxg&s" alt="Dres AC Milana">
+        <h2>Dres AC Milana</h2>
+        <p class="price">100 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Novi domaći dres AC Milana 2025/26 ima klasične crveno-crne pruge s modernim dizajnom. Puma tehnologija dryCELL osigurava prozračnost i udobnost na terenu.</p>
+        </div>
+    </div>
+
+    <div class="product">
+        <span class="discount">-30%</span>
+        <img src="https://d1g1u1wczfzd7u.cloudfront.net/club_1/gallery/Home/f2206a87-a439-4854-9632-046c0635126f-m.webp" alt="Dres Dinama">
+        <h2>Dres Dinama Zagreb</h2>
+        <p class="price">
+            <span class="old-price">100 €</span>
+            <span class="new-price">70 €</span>
+        </p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Dres Dinama Zagreb 2025/26 kombinira tradicionalnu plavu boju s modernim elementima. Castore materijal pruža odličnu regulaciju vlage i udobnost. Super akcija -30%!</p>
+        </div>
+    </div>
+
+    
+    <div class="product">
+        <span class="discount">AKCIJA</span>
+        <img src="https://hr.futbolemotion.com/imagesarticulos/218625/grandes/camiseta-nike-psg-primera-equipacion-2024-2025-nino-midnight-navy-white-5.webp" alt="Dres PSG">
+        <h2>Dres Paris Saint-Germain</h2>
+        <p class="price">110 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>PSG 2025/26 donosi elegantan crno-modri dres s crveno-bijelim detaljima. Limited edition akcija – idealno za navijače koji žele spoj performansi i stila.</p>
+        </div>
+      </div>
+        <div class="product">
+            <span class="discount">-15%</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8BtbtnOFEymw0yVFHrUlgVu2z9rGIp4q0eQ&s" alt="Dres Manchester United">
+            <h2>Dres Manchester United</h2>
+            <p class="price">
+                <span class="old-price">120 €</span>
+                <span class="new-price">102 €</span>
+            </p>
+            <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+            <div class="details">
+                <p>Novi domaći dres Manchester Uniteda za sezonu 2025/26 u klasičnoj crvenoj boji. Adidas tehnologija odvodi vlagu i osigurava udobnost tijekom cijele utakmice.</p>
+            </div>
+        </div>
+    
+        <div class="product">
+            <span class="discount">-10%</span>
+            <img src="https://i1.t4s.cz//products/780338-01/931650-480.webp" alt="Dres Manchester City">
+            <h2>Dres Manchester City</h2>
+            <p class="price">
+                <span class="old-price">110 €</span>
+                <span class="new-price">99 €</span>
+            </p>
+            <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+            <div class="details">
+                <p>Novi domaći dres Manchester Citya 2025/26 u prepoznatljivoj sky blue boji. Nike tehnologija pruža prozračnost i lagan osjećaj za maksimalnu udobnost na terenu.</p>
+            </div>
+        </div>
+        <div class="product">
+            <span class="discount">-20%</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJUNxFfygl-7PGGHYjogxBYFXRAQgP8DeB7A&s" alt="Dres Bayern Munchen">
+            <h2>Dres Bayern Munchen</h2>
+            <p class="price">
+                <span class="old-price">150 €</span>
+                <span class="new-price">120 €</span>
+            </p>
+            <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+            <div class="details">
+                <p>Otkrij najnoviji domaći dres Bayerna za sezonu 2025/26! Tradicionalna crveno-bijela kombinacija dobila je moderan dizajn s finim detaljima koji odražavaju bogatu povijest kluba. Napredni materijali osiguravaju optimalnu prozračnost i udobnost, dok tehnologija odvodi vlagu i pruža slobodu kretanja na terenu. Idealan izbor za navijače koji žele spoj stila i performansi.</p>
+            </div>
+        </div>
+        <div class="product">
+        <img src="https://assets.adidas.com/images/w_1880,f_auto,q_auto/4637af8460a340dda6fedf8f8bd1c799_9366/JP0459_01_laydown.jpg" alt="Dres Al Nassra">
+        <h2>Dres Al Nassr</h2>
+        <p class="price">80 €</p>
+        <button class="details-btn" onclick="toggleDetails(this)">Detalji</button>
+        <div class="details">
+            <p>Predstavljamo ekskluzivni dres Al-Nassra za sezonu 2025/26, u prepoznatljivoj plavo-žutoj kombinaciji. S elegantnim modernim dizajnom i naprednim materijalima, ovaj dres pruža maksimalnu udobnost i regulaciju temperature. Savršen za sve navijače koji žele pokazati podršku svom klubu, kako na stadionu tako i izvan njega. Limited edition – istakni svoj stil i pripadnost Al-Nassru!</p>
+        </div>
+    </div>
+
+</main>
+
+
+<footer>
+    <div class="footer-icons">
+        <a href="https://www.google.com/maps" style="color:white;">📍</a>
+        <a href="mailto:footballzone@gmail.com" style="color:white;">📧</a>
+        <a href="tel:+385991234567" style="color:white;">📞</a>
+    </div>
+
+    <p>Gabriel Beljak &copy; 2025</p>
+</footer>
+
+<script>
+    function toggleDetails(button) {
+        const details = button.nextElementSibling;
+        details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+    </script>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if(hash === "#real-madrid-dres") {
+        const product = document.querySelector(hash);
+        const details = product.querySelector('.details');
+        details.style.display = 'block';
+        product.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+});
+</script>
+<script src="cart.js"></script>
+</body>
+</html>

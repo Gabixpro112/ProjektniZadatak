@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+<h1>Blagajna</h1>
+</header>
+
+<main>
+
+<h2>Podaci za dostavu</h2>
+
+<form onsubmit="submitOrder(event)" id="checkoutForm">
+
+<input type="text" id="name" placeholder="Ime i prezime" required><br><br>
+<input type="email" id="email" placeholder="Email" required><br><br>
+<input type="text" id="address" placeholder="Adresa" required><br><br>
+<input type="text" id="city" placeholder="Grad" required><br><br>
+<input type="text" id="zip" placeholder="Poštanski broj" required><br><br>
+
+<h2>Način plaćanja</h2>
+
+<select id="payment" onchange="togglePayment()">
+    <option value="cash">💵 Plaćanje pouzećem</option>
+    <option value="card">💳 Kartica</option>
+</select>
+
+<div id="cardFields" style="display:none;">
+    <h3>Podaci kartice</h3>
+
+    <input type="text" id="cardName" placeholder="Ime na kartici"><br><br>
+    <input type="text" id="cardNumber" placeholder="Broj kartice"><br><br>
+    <input type="text" id="exp" placeholder="MM/YY"><br><br>
+    <input type="text" id="cvv" placeholder="CVV"><br><br>
+</div>
+
+<br>
+<button type="submit" class="add-btn">Potvrdi narudžbu</button>
+
+</form>
+
+</main>
+
+<script>
+function togglePayment(){
+    const type = document.getElementById("payment").value;
+    document.getElementById("cardFields").style.display = type === "card" ? "block" : "none";
+}
+
+function submitOrder(e){
+    e.preventDefault();
+
+    const payment = document.getElementById("payment").value;
+
+    if(payment === "card"){
+        const fields = ["cardName","cardNumber","exp","cvv"];
+
+        for(let f of fields){
+            if(document.getElementById(f).value === ""){
+                alert("Molimo ispuni sve podatke za karticu!");
+                return;
+            }
+        }
+    }
+
+    localStorage.removeItem("cart");
+
+    alert("Narudžba uspješno zaprimljena! 🎉");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

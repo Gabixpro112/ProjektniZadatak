@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Košarica</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+<h1>Košarica </h1>
+</header>
+
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="Aboutme.html">O nama</a>
+    <a href="Dresovi.html">Dresovi</a>
+    <a href="Lopte.html">Lopte</a>
+    <a href="Kopacke.html">Kopačke</a>
+    <a href="ostala_oprema.html">Ostala oprema</a>
+    <a href="cart.html">Košarica </a>
+</nav>
+
+<main id="cart-container"></main>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const container = document.getElementById("cart-container");
+
+function renderCart() {
+    container.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+
+        container.innerHTML += `
+            <div class="product">
+                <img src="${item.img}" width="120">
+                <h2>${item.name}</h2>
+                <p>${item.price} €</p>
+
+                <div>
+                    <button onclick="changeQty(${index}, -1)">-</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="changeQty(${index}, 1)">+</button>
+                </div>
+
+                <button onclick="removeItem(${index})">Ukloni</button>
+            </div>
+        `;
+    });
+
+    const totalBox = document.createElement("h2");
+totalBox.style.textAlign = "center";
+totalBox.style.marginTop = "20px";
+totalBox.innerText = `Ukupno: ${total.toFixed(2)} €`;
+container.appendChild(totalBox);
+
+    if(cart.length > 0){
+        container.innerHTML += `<button onclick="goCheckout()" class="add-btn">Kreni na plaćanje</button>`;
+    }
+}
+
+function changeQty(index, value){
+    cart[index].quantity += value;
+
+    if(cart[index].quantity <= 0){
+        cart.splice(index, 1);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+function removeItem(index){
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+function goCheckout(){
+    window.location.href = "checkout.html";
+}
+
+renderCart();
+</script>
+
+</body>
+</html>
